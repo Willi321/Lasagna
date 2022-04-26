@@ -1,5 +1,12 @@
 def main():
     print("Personenerkennung: ")
+def erkennung(): 
+    frage_person = input("Vertreten sie eine Institution: JA/NEIN: ")
+    if frage_person == "NEIN":
+        einGaben()
+    else:
+        print("noch nicht erstellt") #löschen ""
+    #code einfügen wie einGaben nur für institution
 def einGaben():
     userdata_vname = input("Vorname: ")
     userdata_nname = input("Nachname: ")
@@ -11,12 +18,11 @@ def einGaben():
         personenliste.append(object_vname)
         personenliste.append(object_nname)
         personenliste.append(object_bdate)
-        print(personenliste)
-    
-    else: 2
-    print("fehler")
-    einGaben()
 
+    else: 
+        print("fehler")
+        einGaben()
+    print(personenliste)
 
 
 if __name__ == "__main__":
@@ -31,7 +37,8 @@ if __name__ == "__main__":
 
         elif userinput == "2":
             print("2")
-            einGaben()
+            #winGaben() e
+            erkennung()
         elif userinput == "3":
             print("3")
         else: 
